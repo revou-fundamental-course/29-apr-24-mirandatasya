@@ -3,9 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
 <body>
+    <header class="navigation-container">
+        <div id="logo">
+            <img id="logo2" src="assets/gudetama.png" alt=""/> 
+            <p id="namalogo">GUDETAMA</p>
+        </div>
+
+        <nav>
+            <button type="button" onclick="validation()">Home</button>
+            <button type="button" onclick="validation()">Our Package</button>
+            <button type="button" onclick="validation()">Call Us</button>
+        </nav>
+    </header>
+    <hr/>
+
+    <article class="content-container">
+        <header>
+            <h1><span id="name">Miranda</span> Portofolio</h1>
+            <h3>Your happiness is our happiness</h3>
+        </header>
+        
+        <section class="core-content">
+            <div class="core-item1">
+                <img src="assets/bg6.jpg" alt="">
+                <p>"Makanan dapat menjadi sebuah karya seni"</p>
+                <div id="foto">
+                    <img src="assets/profile.jpg" alt="">
+                    <div id="namafoto">
+                        <h1>Miranda Tasya</h1>
+                        <p>Mahasiswa</p>
+                    </div>
+                </div>
+                <header>
+                    <h4>The internet uses fiber optics to transmit data in pulses of light over a wired network. Data is divided into packets, selected for the best route, and regulated by protocols. ICANN manages the internet infrastructure. Understanding its working principles is important to appreciate its power and potential.</h4>
+                    <div class="nomor">
+                        <h3>1</h3>
+                        <p>Posisi Static adalah posisi default dari elemen HTML di halaman web.</p>
+                    </div>
+                    <div class="nomor">
+                        <h3>1</h3>
+                        <p>Posisi Static adalah posisi default dari elemen HTML di halaman web.</p>
+                    </div>
+                    <div class="nomor">
+                        <h3>1</h3>
+                        <p>Posisi Static adalah posisi default dari elemen HTML di halaman web.</p>
+                    </div>
+                </header>
+            </div>
+            
+
+            <div class="core-item2">
+                <header>
+                    <h2>Content Us</h2>
+                    <p>Sales akan menghubungi anda 1x24 jam setelah data kami terima.</p>
+                </header>
+
+                <section class="item-form" name="message-form" onsubmit="return validateForm()">
+                    <label>Your Name:</label><br/>
+                    <input type="text" placeholder="First and last name" id="name-input" required>
+                    <br/>
+
+                    <label>Email Addres:</label><br/>
+                    <input type="text" placeholder="example@email.com">
+                    <br/>
+
+                    <label>Programmer Skill Level</label><br/>
+                    <select id="level" name="level">
+                        <option value="novice">Novice Programmer</option>
+                        <option value="beginner">Advance Beginner Programmer</option>
+                        <option value="competent">Competent Programmer</option>
+                        <option value="proficient">Proficient Programmer</option>
+                        <option value="expert">Expert Programmer</option>
+                    </select>
+                    <br/>
+                    <input id="submit" type="submit" value="SUBMIT">
+                    <p id="eror-name"></p>
+                </section>
+            </div>
+        </section>
+
+        <section class="our-package-content">
+            <h1>Our Package</h1>
+        </section>
+    </article>
+    
+    <script src="JS/script.js"></script>
     
 </body>
 </html>
