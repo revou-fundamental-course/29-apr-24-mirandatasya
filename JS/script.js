@@ -1,6 +1,59 @@
+// Validate Function
 function validation() {
-    console.log('Good')
+    let username = document.getElementById('name-input').value; 
+    let email = document.getElementById('email-input').value;
+    let level = document.getElementById('level-input').value;
+    if (username == '' || username == null, email == '' || email == null) {
+        document.getElementById('name-input').style.border = '2px solid red'
+        document.getElementById('email-input').style.border = '2px solid red'
+        document.getElementById('level-input').style.border = '2px solid red'
+        alert('Inputan Anda Kosong, Coba Periksa Kembali');
+    } else {
+        document.getElementById('name-input').style.border = 'none'
+        document.getElementById('email-input').style.border = 'none'
+        document.getElementById('level-input').style.border = 'none'
+        alert('Welcome ' + username);
+        console.log(username, email, level);
+    }
+
+    document.getElementById("name").innerHTML = username 
 }
+
+// Section Slide
+let indexSlide = 1; // [0, 1, 2]
+showSlide(1);
+
+// Trigger Slide 
+function nextSlide(n) {
+    console.log('nextSlide: ' + n);
+    showSlide(indexSlide += n);
+}
+
+// Slide logic
+function showSlide(index) {
+    let listImage = document.getElementsByClassName('banner-item');
+    console.log(listImage);
+    console.log('Banyaknya image: ' + listImage.length);
+
+    // Reset SlideIndex
+    if (index > listImage.length) indexSlide = 1;
+    
+    // Hide all Images  
+    let i = 0;
+    while (i < listImage.length) {
+        listImage[i].style.display = 'none';
+        i++;
+    }
+
+    // Show only one image
+    listImage[indexSlide - 1].style.display = 'block';  
+    console.log('showSlide: ' + index);
+}
+
+// Auto Slide
+setInterval(() => nextSlide(1), 2000);
+
+document.getElementById('submit').addEventListener('click', () => nextSlide(1))
 
 /* function validateForm() {
 
@@ -63,7 +116,7 @@ document.getElementById('submit').addEventListener("click", function() {
 })
 */
 
-let nameInput = document.getElementById('name-input')
+/* let nameInput = document.getElementById('name-input')
 
 document.getElementById('submit').addEventListener("click", function() {
     const nama = nameInput.value
@@ -75,3 +128,4 @@ document.getElementById('submit').addEventListener("click", function() {
     }
 
 })
+*/
