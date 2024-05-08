@@ -29,7 +29,11 @@
         
         <section class="core-content">
             <div class="core-item1">
-                <img src="assets/bg6.jpg" alt="">
+                <div>
+                    <img class="banner-item" src="assets/bg1.jpg" alt="">
+                    <img class="banner-item" src="assets/bg4.jpg" alt="">
+                    <img class="banner-item" src="assets/bg6.jpg" alt="">
+                </div>
                 <p>"Makanan dapat menjadi sebuah karya seni"</p>
                 <div id="foto">
                     <img src="assets/profile.jpg" alt="">
@@ -45,11 +49,11 @@
                         <p>Posisi Static adalah posisi default dari elemen HTML di halaman web.</p>
                     </div>
                     <div class="nomor">
-                        <h3>1</h3>
+                        <h3>2</h3>
                         <p>Posisi Static adalah posisi default dari elemen HTML di halaman web.</p>
                     </div>
                     <div class="nomor">
-                        <h3>1</h3>
+                        <h3>3</h3>
                         <p>Posisi Static adalah posisi default dari elemen HTML di halaman web.</p>
                     </div>
                 </header>
@@ -62,17 +66,17 @@
                     <p>Sales akan menghubungi anda 1x24 jam setelah data kami terima.</p>
                 </header>
 
-                <section class="item-form" name="message-form" onsubmit="return validateForm()">
+                <form class="item-form" name="message-form" onsubmit="return validateForm()">
                     <label>Your Name:</label><br/>
                     <input type="text" placeholder="First and last name" id="name-input" required>
                     <br/>
 
                     <label>Email Addres:</label><br/>
-                    <input type="text" placeholder="example@email.com">
+                    <input type="text" placeholder="example@email.com" id="email-input" required>
                     <br/>
 
                     <label>Programmer Skill Level</label><br/>
-                    <select id="level" name="level">
+                    <select id="level-input" name="level" required>
                         <option value="novice">Novice Programmer</option>
                         <option value="beginner">Advance Beginner Programmer</option>
                         <option value="competent">Competent Programmer</option>
@@ -80,14 +84,14 @@
                         <option value="expert">Expert Programmer</option>
                     </select>
                     <br/>
-                    <input id="submit" type="submit" value="SUBMIT">
+                    <input type="button" id="submit" value="SUBMIT">
                     <p id="eror-name"></p>
-                </section>
+                </form>
             </div>
         </section>
 
         <section class="our-package-content">
-            <h1>arasy</h1>
+            <h1>Our Package</h1>
         </section>
     </article>
     
