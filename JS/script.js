@@ -53,7 +53,9 @@ function showSlide(index) {
 // Auto Slide
 setInterval(() => nextSlide(1), 2000);
 
-document.getElementById('submit').addEventListener('click', () => nextSlide(1))
+
+document.getElementById('submit').addEventListener('click', () => validation(1))
+
 
 /* function validateForm() {
 
